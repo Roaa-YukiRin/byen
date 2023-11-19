@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بَيِّن</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url("images/معجم الرياض.png");
+            background-size: 1280px 550px;
+            background-repeat: no-repeat;
+        }
+
+        .df-messenger {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 00px; /* تعديل حجم العرض */
+        height: 500px; /* تعديل حجم الارتفاع */
+
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <script>
+        window.addEventListener('dfMessengerLoaded', function () {
+            const dfMessenger = document.querySelector('df-messenger');
+            dfMessenger.setAttribute('location', 'YOUR_AGENT_LOCATION');
+            dfMessenger.setAttribute('project-id', 'YOUR_PROJECT_ID');
+            dfMessenger.setAttribute('access-token', 'YOUR_ACCESS_TOKEN');
+        });
+    </script>
+    <df-messenger
+        chat-title="بَيِّن"
+        agent-id="YOUR_AGENT_ID"
+        language-code="ar"
+        session-id="YOUR_SESSION_ID"
+        integration-id="YOUR_INTEGRATION_ID"
+        client-access-token="YOUR_CLIENT_ACCESS_TOKEN"
+    ></df-messenger>
+
+</body>
+</html>
